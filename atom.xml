@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>老A博客</title>
+  <title>博客</title>
   <subtitle>为技术而生</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjjer.github.com/"/>
-  <updated>2017-08-20T13:01:18.325Z</updated>
+  <updated>2017-08-27T08:21:00.219Z</updated>
   <id>http://wjjer.github.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>泛泰A900最新Carbon ROM评测，基于Android7.1.2</title>
+    <link href="http://wjjer.github.com/2017/08/27/%E6%B3%9B%E6%B3%B0A900%E6%9C%80%E6%96%B0Carbon-ROM%E8%AF%84%E6%B5%8B%EF%BC%8C%E5%9F%BA%E4%BA%8EAndroid7-1-2/"/>
+    <id>http://wjjer.github.com/2017/08/27/泛泰A900最新Carbon-ROM评测，基于Android7-1-2/</id>
+    <published>2017-08-27T07:51:20.000Z</published>
+    <updated>2017-08-27T08:21:00.219Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-先上图"><a href="#1-先上图" class="headerlink" title="1.先上图"></a>1.先上图</h2><pre><code>rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
+</code></pre><hr>
+<p>![alt text] (img/1.jpg “桌面”)<br>![alt text] (img/2.jpg “桌面”)<br>![alt text] (img/3.jpg “任务”)<br>![alt text] (img/4.jpg “设置”)</p>
+<h2 id="alt-text-img-5-jpg-“关于手机”"><a href="#alt-text-img-5-jpg-“关于手机”" class="headerlink" title="![alt text] (img/5.jpg “关于手机”)"></a>![alt text] (img/5.jpg “关于手机”)</h2><h2 id="简单评测"><a href="#简单评测" class="headerlink" title="简单评测"></a>简单评测</h2><p>1.系统整体非常流畅，自带中文，续航情况没有测试，A900尿性，不测也罢<br>2.支持主题，开机剩余ram 1G+  ，整体优化不错<br>3.总之不错，试了就知道，哈哈，写不下去了</p>
+<hr>
+<h2 id="附上原贴说明"><a href="#附上原贴说明" class="headerlink" title="附上原贴说明"></a>附上原贴说明</h2><p>![alt text] (img/or.png “原贴”)</p>
+<hr>
+<p>自己翻译，哈哈，别问我啥意思，我就是个搬运工</p>
+<hr>
+<h2 id="最后奉上下载链接"><a href="#最后奉上下载链接" class="headerlink" title="最后奉上下载链接"></a>最后奉上下载链接</h2><p><a href="https://sourceforge.net/projects/nguyenhung9x/files/Carbon/A900/" target="_blank" rel="external">https://sourceforge.net/projects/nguyenhung9x/files/Carbon/A900/</a><br>建议配合lantern ，rom不大，只有200M+<br>刷机别忘了双清</p>
+<hr>
+<h2 id="最后几句"><a href="#最后几句" class="headerlink" title="最后几句"></a>最后几句</h2><p>本博客是我新搭建的，希望大家多多支持，后续有啥ROM，会陆续搬运<br>有啥不懂得可以加我QQ<br>2301403600</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-先上图&quot;&gt;&lt;a href=&quot;#1-先上图&quot; class=&quot;headerlink&quot; title=&quot;1.先上图&quot;&gt;&lt;/a&gt;1.先上图&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
+&lt;/code&gt;&lt;/pre&gt;&lt;h
+    
+    </summary>
+    
+      <category term="搞机" scheme="http://wjjer.github.com/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+      <category term="泛泰A900" scheme="http://wjjer.github.com/tags/%E6%B3%9B%E6%B3%B0A900/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
