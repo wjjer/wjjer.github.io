@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>为Android手机安装多系统【A900测试成功】 | A Blog | 为技术而生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#00B2EE">
+    
+    
+    <meta name="keywords" content="搞机">
+    <meta name="description" content="说明曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统 前提那么想安装双系统，则需要先Root你的手机，不懂的同学可以Google一下。 刷机包的选择不同的手机，它的第三方刷机包的适配情况也是不同的，根据自己的喜好选择刷机包即可，下载好刷机包之后，把它传入手">
+<meta name="keywords" content="搞机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为Android手机安装多系统【A900测试成功】">
+<meta property="og:url" content="http://wjjer.github.com/2017/08/28/androidMoreSys/index.html">
+<meta property="og:site_name" content="A Blog">
+<meta property="og:description" content="说明曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统 前提那么想安装双系统，则需要先Root你的手机，不懂的同学可以Google一下。 刷机包的选择不同的手机，它的第三方刷机包的适配情况也是不同的，根据自己的喜好选择刷机包即可，下载好刷机包之后，把它传入手">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/1.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/2.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/3.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/4.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/5.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/6.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/7.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/8.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/9.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/10.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/11.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/12.jpg">
+<meta property="og:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/13.jpg">
+<meta property="og:updated_time" content="2017-08-28T10:56:15.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为Android手机安装多系统【A900测试成功】">
+<meta name="twitter:description" content="说明曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统 前提那么想安装双系统，则需要先Root你的手机，不懂的同学可以Google一下。 刷机包的选择不同的手机，它的第三方刷机包的适配情况也是不同的，根据自己的喜好选择刷机包即可，下载好刷机包之后，把它传入手">
+<meta name="twitter:image" content="http://wjjer.github.com/2017/08/28/androidMoreSys/1.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="A Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Allan</h5>
+          <a href="mailto:2301403600@qq.com" title="2301403600@qq.com" class="mail">2301403600@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/videos"  >
+                <i class="icon icon-lg icon-github"></i>
+                福利视频
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                友链
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">为Android手机安装多系统【A900测试成功】</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">为Android手机安装多系统【A900测试成功】</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-28T10:56:15.816Z" itemprop="datePublished" class="page-time">
+  2017-08-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搞机/">搞机</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#说明"><span class="post-toc-number">1.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前提"><span class="post-toc-number">2.</span> <span class="post-toc-text">前提</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刷机包的选择"><span class="post-toc-number">3.</span> <span class="post-toc-text">刷机包的选择</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#双系统的关键"><span class="post-toc-number">4.</span> <span class="post-toc-text">双系统的关键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">5.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始刷机"><span class="post-toc-number">6.</span> <span class="post-toc-text"> 开始刷机</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-androidMoreSys"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">为Android手机安装多系统【A900测试成功】</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-28 18:56:15" datetime="2017-08-28T10:56:15.816Z"  itemprop="datePublished">2017-08-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搞机/">搞机</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>那么想安装双系统，则需要先Root你的手机，不懂的同学可以Google一下。</p>
+<h2 id="刷机包的选择"><a href="#刷机包的选择" class="headerlink" title="刷机包的选择"></a>刷机包的选择</h2><p>不同的手机，它的第三方刷机包的适配情况也是不同的，根据自己的喜好选择刷机包即可，下载好刷机包之后，把它传入手机。</p>
+<h2 id="双系统的关键"><a href="#双系统的关键" class="headerlink" title="双系统的关键"></a>双系统的关键</h2><p>实现双系统的原理是chroot，可以通过一款叫做DualBootPatcher的软件实现。<br><br>下载地址 :<a href="https://dbp.noobdev.io/files/9.2.0.r92.gf08505b/Android/DualBootPatcherAndroid-9.2.0.r92.gf08505b-snapshot.apk" target="_blank" rel="external">戳我</a></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>所有ROM需要有ROOT权限！如果刷的系统没有ROOT权限，请刷ROOT包，操作过程和刷系统过程一样，首先给root包打补丁–到第4步补丁选项这里，刷入位置请选择你刚刷入的data分区，我的是sudamod（data分区）所以我选择这个！sudamod自带ROOT，我这里只是为了演示操作过程！</li>
+<li>切记刷新ROM前请关闭所有系统锁屏指纹密码！如不关闭可能会造成前面的系统解锁提示密码错误无法进入。刷完系统每个系统启动正常后再打开指</li>
+<li>第4步完的时候，如果遇到 请在「设置」-「其他应用管理」中启用「文档」 是系统文档被停用了，请在设置 &gt; 其它应用&gt; 全部 &gt; 打开“文档”的APP 选择启用.目前miui系统文档是被禁用的，其他系统未知。</li>
+<li>系统切换：在新系统里也安装这个软件就可以自由切换了。</li>
+</ul>
+<h2 id="开始刷机"><a href="#开始刷机" class="headerlink" title=" 开始刷机"></a> 开始刷机</h2><p>在开始刷机之前，请再次确认以下条件已经满足：</p>
+<ul>
+<li>手机已Root</li>
+<li>手机内有第二个系统的刷机包</li>
+<li>DualBootPatcher已经安装好并已被授予ROOT权限</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/1.jpg" alt="打开侧滑栏" title="">
+                </div>
+                <div class="image-caption">打开侧滑栏</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/2.jpg" alt="选择add zip 选项" title="">
+                </div>
+                <div class="image-caption">选择add zip 选项</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/3.jpg" alt="选择ROM" title="">
+                </div>
+                <div class="image-caption">选择ROM</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/4.jpg" alt="进行相关设置" title="">
+                </div>
+                <div class="image-caption">进行相关设置</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/5.jpg" alt="对新补丁包进行保存" title="">
+                </div>
+                <div class="image-caption">对新补丁包进行保存</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/6.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/7.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/8.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/9.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/10.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/11.jpg" alt="完成提示" title="">
+                </div>
+                <div class="image-caption">完成提示</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/12.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/2017/08/28/androidMoreSys/13.jpg" alt="设置内核" title="">
+                </div>
+                <div class="image-caption">设置内核</div>
+            </figure>
+<p>现在返回ROM界面选择你要切换的系统就行了！</p>
+<p>如果有什么问题欢迎在我博客下留言或者联系QQ:2301403600</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-28T10:56:15.816Z" itemprop="dateUpdated">2017-08-28 18:56:15</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://wjjer.github.com">
+            <img src="/img/avatar.jpg" alt="Allan">
+            Allan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搞机/">搞机</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wjjer.github.com/2017/08/28/androidMoreSys/&title=《为Android手机安装多系统【A900测试成功】》 — A Blog&pic=http://wjjer.github.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wjjer.github.com/2017/08/28/androidMoreSys/&title=《为Android手机安装多系统【A900测试成功】》 — A Blog&source=专注于交流学习共享资源" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wjjer.github.com/2017/08/28/androidMoreSys/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《为Android手机安装多系统【A900测试成功】》 — A Blog&url=http://wjjer.github.com/2017/08/28/androidMoreSys/&via=http://wjjer.github.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wjjer.github.com/2017/08/28/androidMoreSys/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/27/carbon/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">泛泰A900最新Carbon ROM评测，基于Android7.1.2</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6497197152092091",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'wjjer',
+            repo: 'wjjer.github.io',
+            oauth: {
+                client_id: 'b9acac8cb2e267292755',
+                client_secret: '8aeb1e0fd6b1a4ff4801644d2d06631e3e409579',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        您的支持是我前进的动力~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Allan &copy; 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://wjjer.github.com/2017/08/28/androidMoreSys/&title=《为Android手机安装多系统【A900测试成功】》 — A Blog&pic=http://wjjer.github.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://wjjer.github.com/2017/08/28/androidMoreSys/&title=《为Android手机安装多系统【A900测试成功】》 — A Blog&source=专注于交流学习共享资源" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://wjjer.github.com/2017/08/28/androidMoreSys/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《为Android手机安装多系统【A900测试成功】》 — A Blog&url=http://wjjer.github.com/2017/08/28/androidMoreSys/&via=http://wjjer.github.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://wjjer.github.com/2017/08/28/androidMoreSys/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://wjjer.github.com/2017/08/28/androidMoreSys/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '客官快来嘛～！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来哦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
