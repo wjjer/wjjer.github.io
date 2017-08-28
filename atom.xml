@@ -22,7 +22,7 @@
     <published>2017-08-28T10:56:15.816Z</published>
     <updated>2017-08-28T10:56:15.816Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统</p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进和使用一个系统，那么今天就教大家如何为手机安装双系统</p>
 <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>那么想安装双系统，则需要先Root你的手机，不懂的同学可以Google一下。</p>
 <h2 id="刷机包的选择"><a href="#刷机包的选择" class="headerlink" title="刷机包的选择"></a>刷机包的选择</h2><p>不同的手机，它的第三方刷机包的适配情况也是不同的，根据自己的喜好选择刷机包即可，下载好刷机包之后，把它传入手机。</p>
 <h2 id="双系统的关键"><a href="#双系统的关键" class="headerlink" title="双系统的关键"></a>双系统的关键</h2><p>实现双系统的原理是chroot，可以通过一款叫做DualBootPatcher的软件实现。<br><br>下载地址 :<a href="https://dbp.noobdev.io/files/9.2.0.r92.gf08505b/Android/DualBootPatcherAndroid-9.2.0.r92.gf08505b-snapshot.apk" target="_blank" rel="external">戳我</a></p>
@@ -135,7 +135,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;曾用过一段时间诺基亚N9，对它可实现Meego/Android双系统启动印象深刻，转到安卓阵营后，虽成了刷机狂魔，不过遗憾的是，每次只能刷进
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;曾用过一段时间诺基亚N9，对它可实现Me
     
     </summary>
     
@@ -153,7 +153,7 @@
     <published>2017-08-27T07:51:20.000Z</published>
     <updated>2017-08-28T11:19:48.835Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-先上图"><a href="#1-先上图" class="headerlink" title="1.先上图"></a>1.先上图</h2><pre><code>rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-先上图"><a href="#1-先上图" class="headerlink" title="1.先上图"></a>1.先上图</h2><pre><code>rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
 </code></pre><hr>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -209,8 +209,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-先上图&quot;&gt;&lt;a href=&quot;#1-先上图&quot; class=&quot;headerlink&quot; title=&quot;1.先上图&quot;&gt;&lt;/a&gt;1.先上图&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
-&lt;/code&gt;&lt;/pre&gt;&lt;h
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h2 id=&quot;1-先上图&quot;&gt;&lt;a href=&quot;#1-先上图&quot; class=&quot;headerlink&quot; title=&quot;1.先上图&quot;&gt;&lt;/a&gt;1.先上图&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;
     
     </summary>
     
