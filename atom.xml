@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjjer.github.com/"/>
-  <updated>2017-08-29T13:57:59.698Z</updated>
+  <updated>2017-08-30T13:15:10.354Z</updated>
   <id>http://wjjer.github.com/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓ROM移植 易懂详解</title>
+    <link href="http://wjjer.github.com/2017/08/30/Rom%E7%A7%BB%E6%A4%8D/"/>
+    <id>http://wjjer.github.com/2017/08/30/Rom移植/</id>
+    <published>2017-08-30T07:51:20.000Z</published>
+    <updated>2017-08-30T13:15:10.354Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="分析整个ROM包内的大致框架及各个文件的作用"><a href="#分析整个ROM包内的大致框架及各个文件的作用" class="headerlink" title="分析整个ROM包内的大致框架及各个文件的作用"></a>分析整个ROM包内的大致框架及各个文件的作用</h2><ul>
+<li>system/app这个里面主要存放的是常规的应用程序，都是以apk格式结尾的文件，在这个文件夹下面的程序为系统默认的组件，个人安装的软件不会出现在这里，而是data文件夹中。</li>
+<li>system/bin 这个目录下的文件都是系统的本地程序，从bin文件夹名称可以看出是binar 二进制的程序，里面主要是Linux系统自带的组件。</li>
+<li>system/etc 该文件夹下保存的都是系统的配置文件，比如APN接入点设置等核心的配置。</li>
+<li>system/fonts 该文件夹下除了标准字体和粗体、斜体外可以看到文件体积最大的可能是中文字库或者一些unicode字库。</li>
+<li>system/framework 该文件夹下主要是一些核心的文件，是系统平台的框架。</li>
+<li>system/lib目录中存放的主要是系统的底层库，比如系统平台运行时的服务库，移植过程中很多关键的地方在于此。</li>
+<li>system/media 该文件下包括开机动画的文件、音乐铃声文件夹，除此以外还包括一些系统提示音文件。</li>
+<li>system/usr 用户文件夹，包括一些共享、时区文件、键盘的一些布局文件。</li>
+</ul>
+<h2 id="接下来是一些相关文件的介绍部分"><a href="#接下来是一些相关文件的介绍部分" class="headerlink" title="接下来是一些相关文件的介绍部分"></a>接下来是一些相关文件的介绍部分</h2><p>\system\bin\system\bin\app_process 系统进程<br>\system\bin\dalvikvm Dalvik虚拟机宿主<br>\system\bin\dbus-daemon 系统BUS总线监控<br>\system\bin\debuggerd 调试器<br>\system\bin\debug_tool 调试工具<br>\system\bin\dexopt DEX选项<br>\system\bin\dhcpcd DHCP服务器<br>\system\bin\dumpstate 状态抓取器<br>\system\bin\dumpsys 系统抓取器<br>\system\bin\hcid HCID内核<br>\system\bin\mountd 存储挂载器<br>\system\bin\netcfg 网络设置<br>\system\bin\ping Ping程序<br>\system\bin\playmp3 MP3播放器<br>\system\bin\pm 包管理器<br>\system\bin\qemud QEMU虚拟机<br>\system\bin\radiooptions 无线选项<br>\system\bin\rild RIL组件<br>\system\bin\servicemanager 服务管理器<br>\system\bin\ssltest SSL测试<br>\system\bin\su**ceflinger 触摸感应驱动<br>\system\bin\svc 服务部分<br>system/etc\system\etc\apns-conf.xml APN接入点配置文件<br>\system\etc\AudioFilter.csv 音频过滤器配置文件<br>\system\etc\bookmarks.xml 书签数据库<br>\system\etc\dbus.conf 总线监视配置文件<br>\system\etc\favorites.xml 收藏夹<br>\system\etc\firmware 固件信息<br>\system\etc\gps.conf GPS设置文件<br>\system\etc\hcid.conf内核HCID配置文件<br>\system\etc\hosts 网络DNS缓存<br>\system\etc\mountd.conf 存储挂载配置文件<br>\system\etc\NOTICE.html 提示网页\<br>\system\etc\permissions.xml 权限许可部分<br>system/lib\system\lib\libandroid_runtime.so Android运行时库<br>\system\lib\libandroid_servers.so 系统服务组件<br>\system\lib\libaudio.so 音频处理<br>\system\lib\libaudioeq.so EQ均衡器<br>\system\lib\libaudioflinger.so 音频过滤器<br>\system\lib\libbluetooth.so 蓝牙组件<br>\system\lib\libcamera.so 相机组件<br>\system\lib\libcrypto.so 加密组件<br>\system\lib\libdrm1.so DRM解析库</p>
+<h2 id="移植XUI刷机ROM前的准备"><a href="#移植XUI刷机ROM前的准备" class="headerlink" title="移植XUI刷机ROM前的准备"></a>移植XUI刷机ROM前的准备</h2><p>1、首先建议安装对比工具BeyondCompare （网上资源很多，直接百度或者google 搜索BeyondCompare）<br>2、建议Linux环境ubuntu系统（该系统下可以使用赫赫有名的Android厨房工具）<br>3、Android厨房工具的使用方法在此略过…（Android厨房工具中文版里面相关的功能都有明确的指导，简单易用）<br>4、准备要移植机型的底包，移植XUI，找到合适的底包也是关键所在。</p>
+<ul>
+<li>本教程中我们讲的是第三方ROM的移植，不包括官方ROM和官方ROM美化版。<br>选取底包的条件是:<br>0）首先在相应官网找到分辨率类似的机型。<br>1）首先要找到自己对应机型ROM，如CM 10，如果是Android4.0的推荐使用AOKP（谷歌开源非官方代码项目）版本的ROM。<br>2）所选择的作为底包的ROM要尽量功能完善；还要保证刷机脚本的通用性；在刷机包的 META-INF/com/google/android/内的updater-script是刷机的脚本，打开刷机脚本，将其中的第一行关于机型验证的代码删除。<br>3）如果为自己机型开发的ROM不是很多的话，则尽量选取使用同一厂商同一平台的其它机器的 ROM。<br>4）尽量选择zip格式的卡刷包</li>
+</ul>
+<h2 id="移植过程所要执行的操作"><a href="#移植过程所要执行的操作" class="headerlink" title="移植过程所要执行的操作"></a>移植过程所要执行的操作</h2><p>1、首先移植XUI的应用层和framework层，该步骤是将替换system文件夹下的app和framework为XUI的文件内容<br>2、移植应用层（system/app）：备注：如果没有上述文件，就要添加。<br>3、移植系统框架层（system/framework）：备注：如果没有上述某些文件，则需要添加<br>4、移植lib库文件 (system/lib)如下图：备注：如果没有上述某些文件，则需要添加<br>5、移植bin文件（system/bin）  ：备注：如果没有上述某些文件，则需要添加<br>6、系统内的system/etc文件暂时不需要移植<br>7、在system/media文件内是开机动画和一些系统铃声已经自己添加的铃声，可以根据自己的喜好来决定是否移植</p>
+<h2 id="最后修改build-prop文件"><a href="#最后修改build-prop文件" class="headerlink" title="最后修改build.prop文件  "></a>最后修改build.prop文件  </h2><ul>
+<li>ro.xda.version=此处的值必须保留所移植的XUI的build.prop内的该值，比如是Bate1.9，  则该值必须是Bate1.9，否则会影响新版本XUI的升级提示。</li>
+<li>ro.build.date=该移植版本的制作日期。（请注意日期显示的格式，否则会出现乱编码） </li>
+<li>ro.build.display.id= “在此可以添加自己的昵称，签上制作者名”  </li>
+<li>ro.product.model=手机的型号；便于一些辅助软件的正确识别（比如豌豆荚、91助手等）。</li>
+<li>ro.xda.device=该值是手机设备的名称  </li>
+<li>ro.modversion=所移植的ROM的版本号。（比如该版本是X-UI-Beta1.9）  </li>
+</ul>
+<h2 id="移植完成以后进行为ROM签名打包顺利完成上述步骤后"><a href="#移植完成以后进行为ROM签名打包顺利完成上述步骤后" class="headerlink" title="移植完成以后进行为ROM签名打包顺利完成上述步骤后"></a>移植完成以后进行为ROM签名打包顺利完成上述步骤后</h2><p>有关XUI移植的ROM工作基本完成，接着要对移植的文件进行签名打包，这个时候就要用的上文中提到的“android厨房工具”，有关android厨房的签名打包过程，在这里就不一一赘述。将打包得到的zip压缩文件放于sd卡，进入刷机模式进行刷机，想必大家进行移植操作的对刷机流畅都很熟悉了。</p>
+<h2 id="刷机测试过程中，对一些常见的bug的分析以及解决的方法"><a href="#刷机测试过程中，对一些常见的bug的分析以及解决的方法" class="headerlink" title="刷机测试过程中，对一些常见的bug的分析以及解决的方法"></a>刷机测试过程中，对一些常见的bug的分析以及解决的方法</h2><ul>
+<li>鉴于每位ROM制作者所移植的机型不同，进行了不同的修改和替换，难免在刷机和测试过程可能出现一些bug，接下来是一些常见的bug以及问题的解决方法：<br>1、bug：在进行刷机测试时候，手机屏幕卡在第一屏不能进去系统或者卡在开机动画或者无限重启。   解决方法：对该机型单刷底包的boot.img。如果是自己在移植过程中多替换或者没有替换system/etc或者system/bin内的文件，单刷boot.img也是无济于事。<br>2、bug：刷机测试能进去系统，但是会提示launcher异常终止、手机主界面图标显示不完全   解决方法：重新找到和所要移植的XUI分辨率相同或者相似的合适的底包。<br>3、bug：刷机测试wifi、和蓝牙打不开   解决方法：替换底包或者相同机型的其他ROM的wifi或者蓝牙相关的组件。同时也不排除是在移植过程中没有正确移植相应的库文件和驱动。<br>4、bug：刷机测试，手机SIM卡上网是信号时有是无   解决方法：找到所移植的XUI包内的lib文件夹下，将libganril.so和libreference-ril.so（不同的机型相关文件可能还有其他几个）重新替换到移植后的底包，再重新打包刷机。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h2 id=&quot;分析整个ROM包内的大致框架及各个文件的作用&quot;&gt;&lt;a href=&quot;#分析整个ROM包内的大致框架及各个文件的作用&quot; class=&quot;headerlink&quot; title
+    
+    </summary>
+    
+      <category term="ROM移植" scheme="http://wjjer.github.com/categories/ROM%E7%A7%BB%E6%A4%8D/"/>
+    
+    
+      <category term="Rom移植" scheme="http://wjjer.github.com/tags/Rom%E7%A7%BB%E6%A4%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>免费科学上网 蓝灯 v3.7.4 (0705) 专业版无限制破解版</title>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>安卓ROM移植 易懂详解 | A Blog | 为技术而生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#00B2EE">
+    
+    
+    <meta name="keywords" content="Rom移植">
+    <meta name="description" content="分析整个ROM包内的大致框架及各个文件的作用 system/app这个里面主要存放的是常规的应用程序，都是以apk格式结尾的文件，在这个文件夹下面的程序为系统默认的组件，个人安装的软件不会出现在这里，而是data文件夹中。 system/bin 这个目录下的文件都是系统的本地程序，从bin文件夹名称可以看出是binar 二进制的程序，里面主要是Linux系统自带的组件。 system/etc 该">
+<meta name="keywords" content="Rom移植">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安卓ROM移植 易懂详解">
+<meta property="og:url" content="http://wjjer.github.com/2017/08/30/Rom移植/index.html">
+<meta property="og:site_name" content="A Blog">
+<meta property="og:description" content="分析整个ROM包内的大致框架及各个文件的作用 system/app这个里面主要存放的是常规的应用程序，都是以apk格式结尾的文件，在这个文件夹下面的程序为系统默认的组件，个人安装的软件不会出现在这里，而是data文件夹中。 system/bin 这个目录下的文件都是系统的本地程序，从bin文件夹名称可以看出是binar 二进制的程序，里面主要是Linux系统自带的组件。 system/etc 该">
+<meta property="og:updated_time" content="2017-08-30T13:15:10.354Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安卓ROM移植 易懂详解">
+<meta name="twitter:description" content="分析整个ROM包内的大致框架及各个文件的作用 system/app这个里面主要存放的是常规的应用程序，都是以apk格式结尾的文件，在这个文件夹下面的程序为系统默认的组件，个人安装的软件不会出现在这里，而是data文件夹中。 system/bin 这个目录下的文件都是系统的本地程序，从bin文件夹名称可以看出是binar 二进制的程序，里面主要是Linux系统自带的组件。 system/etc 该">
+    
+        <link rel="alternate" type="application/atom+xml" title="A Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Allan</h5>
+          <a href="mailto:2301403600@qq.com" title="2301403600@qq.com" class="mail">2301403600@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/videos"  >
+                <i class="icon icon-lg icon-github"></i>
+                福利视频
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                留言板
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">安卓ROM移植 易懂详解</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">安卓ROM移植 易懂详解</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-30T07:51:20.000Z" itemprop="datePublished" class="page-time">
+  2017-08-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ROM移植/">ROM移植</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析整个ROM包内的大致框架及各个文件的作用"><span class="post-toc-number">1.</span> <span class="post-toc-text">分析整个ROM包内的大致框架及各个文件的作用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#接下来是一些相关文件的介绍部分"><span class="post-toc-number">2.</span> <span class="post-toc-text">接下来是一些相关文件的介绍部分</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移植XUI刷机ROM前的准备"><span class="post-toc-number">3.</span> <span class="post-toc-text">移植XUI刷机ROM前的准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移植过程所要执行的操作"><span class="post-toc-number">4.</span> <span class="post-toc-text">移植过程所要执行的操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后修改build-prop文件"><span class="post-toc-number">5.</span> <span class="post-toc-text">最后修改build.prop文件  </span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移植完成以后进行为ROM签名打包顺利完成上述步骤后"><span class="post-toc-number">6.</span> <span class="post-toc-text">移植完成以后进行为ROM签名打包顺利完成上述步骤后</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刷机测试过程中，对一些常见的bug的分析以及解决的方法"><span class="post-toc-number">7.</span> <span class="post-toc-text">刷机测试过程中，对一些常见的bug的分析以及解决的方法</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Rom移植"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">安卓ROM移植 易懂详解</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-30 15:51:20" datetime="2017-08-30T07:51:20.000Z"  itemprop="datePublished">2017-08-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ROM移植/">ROM移植</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <script src="/assets/js/APlayer.min.js"> </script><h2 id="分析整个ROM包内的大致框架及各个文件的作用"><a href="#分析整个ROM包内的大致框架及各个文件的作用" class="headerlink" title="分析整个ROM包内的大致框架及各个文件的作用"></a>分析整个ROM包内的大致框架及各个文件的作用</h2><ul>
+<li>system/app这个里面主要存放的是常规的应用程序，都是以apk格式结尾的文件，在这个文件夹下面的程序为系统默认的组件，个人安装的软件不会出现在这里，而是data文件夹中。</li>
+<li>system/bin 这个目录下的文件都是系统的本地程序，从bin文件夹名称可以看出是binar 二进制的程序，里面主要是Linux系统自带的组件。</li>
+<li>system/etc 该文件夹下保存的都是系统的配置文件，比如APN接入点设置等核心的配置。</li>
+<li>system/fonts 该文件夹下除了标准字体和粗体、斜体外可以看到文件体积最大的可能是中文字库或者一些unicode字库。</li>
+<li>system/framework 该文件夹下主要是一些核心的文件，是系统平台的框架。</li>
+<li>system/lib目录中存放的主要是系统的底层库，比如系统平台运行时的服务库，移植过程中很多关键的地方在于此。</li>
+<li>system/media 该文件下包括开机动画的文件、音乐铃声文件夹，除此以外还包括一些系统提示音文件。</li>
+<li>system/usr 用户文件夹，包括一些共享、时区文件、键盘的一些布局文件。</li>
+</ul>
+<h2 id="接下来是一些相关文件的介绍部分"><a href="#接下来是一些相关文件的介绍部分" class="headerlink" title="接下来是一些相关文件的介绍部分"></a>接下来是一些相关文件的介绍部分</h2><p>\system\bin\system\bin\app_process 系统进程<br>\system\bin\dalvikvm Dalvik虚拟机宿主<br>\system\bin\dbus-daemon 系统BUS总线监控<br>\system\bin\debuggerd 调试器<br>\system\bin\debug_tool 调试工具<br>\system\bin\dexopt DEX选项<br>\system\bin\dhcpcd DHCP服务器<br>\system\bin\dumpstate 状态抓取器<br>\system\bin\dumpsys 系统抓取器<br>\system\bin\hcid HCID内核<br>\system\bin\mountd 存储挂载器<br>\system\bin\netcfg 网络设置<br>\system\bin\ping Ping程序<br>\system\bin\playmp3 MP3播放器<br>\system\bin\pm 包管理器<br>\system\bin\qemud QEMU虚拟机<br>\system\bin\radiooptions 无线选项<br>\system\bin\rild RIL组件<br>\system\bin\servicemanager 服务管理器<br>\system\bin\ssltest SSL测试<br>\system\bin\su**ceflinger 触摸感应驱动<br>\system\bin\svc 服务部分<br>system/etc\system\etc\apns-conf.xml APN接入点配置文件<br>\system\etc\AudioFilter.csv 音频过滤器配置文件<br>\system\etc\bookmarks.xml 书签数据库<br>\system\etc\dbus.conf 总线监视配置文件<br>\system\etc\favorites.xml 收藏夹<br>\system\etc\firmware 固件信息<br>\system\etc\gps.conf GPS设置文件<br>\system\etc\hcid.conf内核HCID配置文件<br>\system\etc\hosts 网络DNS缓存<br>\system\etc\mountd.conf 存储挂载配置文件<br>\system\etc\NOTICE.html 提示网页\<br>\system\etc\permissions.xml 权限许可部分<br>system/lib\system\lib\libandroid_runtime.so Android运行时库<br>\system\lib\libandroid_servers.so 系统服务组件<br>\system\lib\libaudio.so 音频处理<br>\system\lib\libaudioeq.so EQ均衡器<br>\system\lib\libaudioflinger.so 音频过滤器<br>\system\lib\libbluetooth.so 蓝牙组件<br>\system\lib\libcamera.so 相机组件<br>\system\lib\libcrypto.so 加密组件<br>\system\lib\libdrm1.so DRM解析库</p>
+<h2 id="移植XUI刷机ROM前的准备"><a href="#移植XUI刷机ROM前的准备" class="headerlink" title="移植XUI刷机ROM前的准备"></a>移植XUI刷机ROM前的准备</h2><p>1、首先建议安装对比工具BeyondCompare （网上资源很多，直接百度或者google 搜索BeyondCompare）<br>2、建议Linux环境ubuntu系统（该系统下可以使用赫赫有名的Android厨房工具）<br>3、Android厨房工具的使用方法在此略过…（Android厨房工具中文版里面相关的功能都有明确的指导，简单易用）<br>4、准备要移植机型的底包，移植XUI，找到合适的底包也是关键所在。</p>
+<ul>
+<li>本教程中我们讲的是第三方ROM的移植，不包括官方ROM和官方ROM美化版。<br>选取底包的条件是:<br>0）首先在相应官网找到分辨率类似的机型。<br>1）首先要找到自己对应机型ROM，如CM 10，如果是Android4.0的推荐使用AOKP（谷歌开源非官方代码项目）版本的ROM。<br>2）所选择的作为底包的ROM要尽量功能完善；还要保证刷机脚本的通用性；在刷机包的 META-INF/com/google/android/内的updater-script是刷机的脚本，打开刷机脚本，将其中的第一行关于机型验证的代码删除。<br>3）如果为自己机型开发的ROM不是很多的话，则尽量选取使用同一厂商同一平台的其它机器的 ROM。<br>4）尽量选择zip格式的卡刷包</li>
+</ul>
+<h2 id="移植过程所要执行的操作"><a href="#移植过程所要执行的操作" class="headerlink" title="移植过程所要执行的操作"></a>移植过程所要执行的操作</h2><p>1、首先移植XUI的应用层和framework层，该步骤是将替换system文件夹下的app和framework为XUI的文件内容<br>2、移植应用层（system/app）：备注：如果没有上述文件，就要添加。<br>3、移植系统框架层（system/framework）：备注：如果没有上述某些文件，则需要添加<br>4、移植lib库文件 (system/lib)如下图：备注：如果没有上述某些文件，则需要添加<br>5、移植bin文件（system/bin）  ：备注：如果没有上述某些文件，则需要添加<br>6、系统内的system/etc文件暂时不需要移植<br>7、在system/media文件内是开机动画和一些系统铃声已经自己添加的铃声，可以根据自己的喜好来决定是否移植</p>
+<h2 id="最后修改build-prop文件"><a href="#最后修改build-prop文件" class="headerlink" title="最后修改build.prop文件  "></a>最后修改build.prop文件  </h2><ul>
+<li>ro.xda.version=此处的值必须保留所移植的XUI的build.prop内的该值，比如是Bate1.9，  则该值必须是Bate1.9，否则会影响新版本XUI的升级提示。</li>
+<li>ro.build.date=该移植版本的制作日期。（请注意日期显示的格式，否则会出现乱编码） </li>
+<li>ro.build.display.id= “在此可以添加自己的昵称，签上制作者名”  </li>
+<li>ro.product.model=手机的型号；便于一些辅助软件的正确识别（比如豌豆荚、91助手等）。</li>
+<li>ro.xda.device=该值是手机设备的名称  </li>
+<li>ro.modversion=所移植的ROM的版本号。（比如该版本是X-UI-Beta1.9）  </li>
+</ul>
+<h2 id="移植完成以后进行为ROM签名打包顺利完成上述步骤后"><a href="#移植完成以后进行为ROM签名打包顺利完成上述步骤后" class="headerlink" title="移植完成以后进行为ROM签名打包顺利完成上述步骤后"></a>移植完成以后进行为ROM签名打包顺利完成上述步骤后</h2><p>有关XUI移植的ROM工作基本完成，接着要对移植的文件进行签名打包，这个时候就要用的上文中提到的“android厨房工具”，有关android厨房的签名打包过程，在这里就不一一赘述。将打包得到的zip压缩文件放于sd卡，进入刷机模式进行刷机，想必大家进行移植操作的对刷机流畅都很熟悉了。</p>
+<h2 id="刷机测试过程中，对一些常见的bug的分析以及解决的方法"><a href="#刷机测试过程中，对一些常见的bug的分析以及解决的方法" class="headerlink" title="刷机测试过程中，对一些常见的bug的分析以及解决的方法"></a>刷机测试过程中，对一些常见的bug的分析以及解决的方法</h2><ul>
+<li>鉴于每位ROM制作者所移植的机型不同，进行了不同的修改和替换，难免在刷机和测试过程可能出现一些bug，接下来是一些常见的bug以及问题的解决方法：<br>1、bug：在进行刷机测试时候，手机屏幕卡在第一屏不能进去系统或者卡在开机动画或者无限重启。   解决方法：对该机型单刷底包的boot.img。如果是自己在移植过程中多替换或者没有替换system/etc或者system/bin内的文件，单刷boot.img也是无济于事。<br>2、bug：刷机测试能进去系统，但是会提示launcher异常终止、手机主界面图标显示不完全   解决方法：重新找到和所要移植的XUI分辨率相同或者相似的合适的底包。<br>3、bug：刷机测试wifi、和蓝牙打不开   解决方法：替换底包或者相同机型的其他ROM的wifi或者蓝牙相关的组件。同时也不排除是在移植过程中没有正确移植相应的库文件和驱动。<br>4、bug：刷机测试，手机SIM卡上网是信号时有是无   解决方法：找到所移植的XUI包内的lib文件夹下，将libganril.so和libreference-ril.so（不同的机型相关文件可能还有其他几个）重新替换到移植后的底包，再重新打包刷机。</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-30T13:15:10.354Z" itemprop="dateUpdated">2017-08-30 21:15:10</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://wjjer.github.com">
+            <img src="/img/avatar.jpg" alt="Allan">
+            Allan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rom移植/">Rom移植</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/29/lanternpojie/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">免费科学上网 蓝灯 v3.7.4 (0705) 专业版无限制破解版</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<div id="SOHUCS" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cytbAoKSa'; 
+var conf = 'prod_d8e5ae05d9e0e2f9024f37896fee7947'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+
+
+
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share?uid=2142611" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2142611" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        您的支持是我的动力~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Allan &copy; 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: , REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '客官快来嘛～！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来哦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
