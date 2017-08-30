@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[Linux  ROM制作工具 SuperR's Kitchen 中文汉化版]]></title>
+      <url>/2017/08/30/%E5%AE%89%E5%8D%93%E5%8E%A8%E6%88%BF/</url>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>SuperR’s Kitchen v1.1.3.7 简然汉化版</p>
+<p>工具名称 SuperR’s Kitchen<br>工具版本 v1.1.3.7 简然汉化版<br>原始版本 v1.1.3.7<br>汉化作者 简然<br>原始作者 SuperR<br>发布时间 2017.01.14<br>系统平台 Linux（Ubuntu） </p>
+<p><img src="/2017/08/30/安卓厨房/k.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>SuperR’s Kitchen 是 SuperR 开发的一款ROM定制工具, <a href="https://forum.xda-developers.com/" target="_blank" rel="external">https://forum.xda-developers.com/</a><br>本厨房支持最新7.0ROM原作者更新较快, 汉化版将持续更新本汉化对照by ZhDroid @ATX Team团队老版1.0.6.3，我仅做更新补全。汉化为本人兴趣使然，大神敬请略过。新手小白可以对照英文原版使用。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>本厨房仅适用于64位Linux环境英文原版安装方法：打开终端逐条输入以下指令并回车完成</p>
+<ul>
+<li>sudo apt install git</li>
+<li>git clone <a href="https://bitbucket.org/superr/superrs-kitchen.git" target="_blank" rel="external">https://bitbucket.org/superr/superrs-kitchen.git</a></li>
+<li>cd superrs-kitchen</li>
+<li>./superr</li>
+</ul>
+<p>汉化版使用方法：在Ubuntu下，解压至桌面，在superrs-kitchen目录内空白处右键 “在终端打开”,将superr文件拖入终端内并回车。本工具内含英文原版和汉化版，替换即可。也可自行安装英文原版。 </p>
+<p>下载地址百度云：<a href="http://pan.baidu.com/s/1pLydbNd" target="_blank" rel="external">here</a>密码：8xgz </p>
+]]></content>
+      
+        <categories>
+            
+            <category> ROM移植 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Rom移植 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[安卓ROM移植 易懂详解]]></title>
       <url>/2017/08/30/Rom%E7%A7%BB%E6%A4%8D/</url>
       <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="分析整个ROM包内的大致框架及各个文件的作用"><a href="#分析整个ROM包内的大致框架及各个文件的作用" class="headerlink" title="分析整个ROM包内的大致框架及各个文件的作用"></a>分析整个ROM包内的大致框架及各个文件的作用</h2><ul>
