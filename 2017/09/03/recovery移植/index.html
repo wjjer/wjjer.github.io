@@ -13,26 +13,24 @@
     
     
     
-    <title>Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版 | A Blog | 为技术而生</title>
+    <title>安卓Recovery移植 | A Blog | 为技术而生</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#00B2EE">
     
     
     <meta name="keywords" content="Rom移植">
-    <meta name="description" content="SuperR’s Kitchen v1.1.3.7 简然汉化版 工具名称 SuperR’s Kitchen工具版本 v1.1.3.7 简然汉化版原始版本 v1.1.3.7汉化作者 简然原始作者 SuperR发布时间 2017.01.14系统平台 Linux（Ubuntu）   前言SuperR’s Kitchen 是 SuperR 开发的一款ROM定制工具, https://forum.xda-">
+    <meta name="description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
 <meta name="keywords" content="Rom移植">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版">
-<meta property="og:url" content="http://wjjer.github.com/2017/08/30/安卓厨房/index.html">
+<meta property="og:title" content="安卓Recovery移植">
+<meta property="og:url" content="http://wjjer.github.com/2017/09/03/recovery移植/index.html">
 <meta property="og:site_name" content="A Blog">
-<meta property="og:description" content="SuperR’s Kitchen v1.1.3.7 简然汉化版 工具名称 SuperR’s Kitchen工具版本 v1.1.3.7 简然汉化版原始版本 v1.1.3.7汉化作者 简然原始作者 SuperR发布时间 2017.01.14系统平台 Linux（Ubuntu）   前言SuperR’s Kitchen 是 SuperR 开发的一款ROM定制工具, https://forum.xda-">
-<meta property="og:image" content="http://wjjer.github.com/2017/08/30/安卓厨房/k.jpg">
-<meta property="og:updated_time" content="2017-08-30T13:31:26.499Z">
+<meta property="og:description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
+<meta property="og:updated_time" content="2017-09-03T14:17:29.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版">
-<meta name="twitter:description" content="SuperR’s Kitchen v1.1.3.7 简然汉化版 工具名称 SuperR’s Kitchen工具版本 v1.1.3.7 简然汉化版原始版本 v1.1.3.7汉化作者 简然原始作者 SuperR发布时间 2017.01.14系统平台 Linux（Ubuntu）   前言SuperR’s Kitchen 是 SuperR 开发的一款ROM定制工具, https://forum.xda-">
-<meta name="twitter:image" content="http://wjjer.github.com/2017/08/30/安卓厨房/k.jpg">
+<meta name="twitter:title" content="安卓Recovery移植">
+<meta name="twitter:description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
     
         <link rel="alternate" type="application/atom+xml" title="A Blog" href="/atom.xml">
     
@@ -120,7 +118,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版</div>
+        <div class="flex-col header-title ellipsis">安卓Recovery移植</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -138,11 +136,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版</h1>
+        <h1 class="title">安卓Recovery移植</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-08-30T10:51:22.000Z" itemprop="datePublished" class="page-time">
-  2017-08-30
+                <time datetime="2017-09-03T07:51:20.000Z" itemprop="datePublished" class="page-time">
+  2017-09-03
 </time>
 
 
@@ -163,17 +161,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">2.</span> <span class="post-toc-text">注意事项</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mtk篇之recovery制作"><span class="post-toc-number">2.</span> <span class="post-toc-text">mtk篇之recovery制作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#非mtk篇之recovery制作"><span class="post-toc-number">3.</span> <span class="post-toc-text">非mtk篇之recovery制作</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-安卓厨房"
+<article id="post-recovery移植"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Linux  ROM制作工具 SuperR's Kitchen 中文汉化版</h1>
+        <h1 class="post-card-title">安卓Recovery移植</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-08-30 18:51:22" datetime="2017-08-30T10:51:22.000Z"  itemprop="datePublished">2017-08-30</time>
+            <time class="post-time" title="2017-09-03 15:51:20" datetime="2017-09-03T07:51:20.000Z"  itemprop="datePublished">2017-09-03</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ROM移植/">ROM移植</a></li></ul>
@@ -188,19 +186,26 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script src="/assets/js/APlayer.min.js"> </script><p>SuperR’s Kitchen v1.1.3.7 简然汉化版</p>
-<p>工具名称 SuperR’s Kitchen<br>工具版本 v1.1.3.7 简然汉化版<br>原始版本 v1.1.3.7<br>汉化作者 简然<br>原始作者 SuperR<br>发布时间 2017.01.14<br>系统平台 Linux（Ubuntu） </p>
-<p><img src="/2017/08/30/安卓厨房/k.jpg" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>SuperR’s Kitchen 是 SuperR 开发的一款ROM定制工具, <a href="https://forum.xda-developers.com/" target="_blank" rel="external">https://forum.xda-developers.com/</a><br>本厨房支持最新7.0ROM原作者更新较快, 汉化版将持续更新本汉化对照by ZhDroid @ATX Team团队老版1.0.6.3，我仅做更新补全。汉化为本人兴趣使然，大神敬请略过。新手小白可以对照英文原版使用。</p>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>本厨房仅适用于64位Linux环境英文原版安装方法：打开终端逐条输入以下指令并回车完成</p>
-<ul>
-<li>sudo apt install git</li>
-<li>git clone <a href="https://bitbucket.org/superr/superrs-kitchen.git" target="_blank" rel="external">https://bitbucket.org/superr/superrs-kitchen.git</a></li>
-<li>cd superrs-kitchen</li>
-<li>./superr</li>
-</ul>
-<p>汉化版使用方法：在Ubuntu下，解压至桌面，在superrs-kitchen目录内空白处右键 “在终端打开”,将superr文件拖入终端内并回车。本工具内含英文原版和汉化版，替换即可。也可自行安装英文原版。 </p>
-<p>下载地址百度云：<a href="http://pan.baidu.com/s/1pLydbNd" target="_blank" rel="external">here</a>密码：8xgz </p>
+            <script src="/assets/js/APlayer.min.js"> </script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。<br>替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab 就是记载系 统各个分区挂载的地方的文 件。在 initrd/etc init.rc 文件是开机初始化文 件。 在 initrd 如果你要添加或着减少文件 ，记得修改cpiolist.txt文件</p>
+<h2 id="mtk篇之recovery制作"><a href="#mtk篇之recovery制作" class="headerlink" title="mtk篇之recovery制作"></a>mtk篇之recovery制作</h2><p>  步骤</p>
+<ol>
+<li>最简单的移植方法是，先解压自己手机的官方recovery.img。<br>进入解压文件夹，找到“kernel“及”kernel_header”,”ramdisk_header”复制备用。有时候，你还要把recovery\rmdisk\etc\目录下的recovery.fstab留着备用。 （ 如果，在安装新的rcovery之后无法进入recovery模式，那么，不必着急，先等待片刻，并尝试再次进入。有时候，recovery中recovery.fstab没有改好挂载点，会出现这种情况.如果尝试第二次进入仍无法正常使用，可能是你手机的开机引导程序无法识别recovery。这时候请把第三方recovery中的ramdisk_header也替换成官方的ramdisk_header即可。）</li>
+</ol>
+<p>2.找到第三方recovery.img。个人推荐 “TWRP recovery”。（下载 同cpu的第三方recovery）</p>
+<p>将第三方recovery.img 复制到工作目录，先把之前生成recovery文件夹重命名，或者移动到其它目录。否则新的操作会把它删除。接着将它解包。同样得一个名为recovery的文件夹。</p>
+<ol>
+<li>将第一步生成的kernel 及kernel_header,ramdisk_header复制替换到第二步生成的第三方recovery文件夹中，并进入第三方recovery解压文件夹的recovery\rmdisk\ect\目录下，找到并打开recovery.fstab，修改其中的挂载点信息.这里要使用支持语法高亮显示的文本编辑器打开修改,如notepad++等,而不能用系统自带记事本.其中,关于sd卡及内置存储的名称表示要与第三方的一样(有些第三方recovery用emmc表示内置存储,那么你也要是这样表示.又如第三方用sdcard2表示外置存储,你也要这么样表示.但挂载点是你手机的)。修改挂载信息是因为,硬件是你手机的,recovery.img中的kernel也换了你手机的.这就决定了手机的分区与挂载驱动的一致性并且与官方原来一样.而recovery.fstab及.rc文件中的相关代码只是要把这些分区挂载到某个目录下.在改好这些挂载信息后,就能将分区挂载到正确的目录下.这一步一定要做，否则分区挂载错误，你的手机系统文件可能会被破坏。或者，你清除缓存格式化等会格错分区。这样将致砖。</li>
+</ol>
+<p>4.尽量修改解包目录下的各个.rc文件,将挂载文件系统部分修改成为你手机一致.(需要对比来改).即修改包含{e2fsck,tune2fs,mount.emmc@android等,或/dev/block/mmcblk0p*}部分的代码. (有些要修改mdt@android等)</p>
+<p>5.如果你是移植触屏的recovery，还要修改res\image\目录下的相应图片的（像素）大小，以适应你的机型。</p>
+<p>我第三方recovery手动移植教程，推荐的TWRP recovery 还要修改res目录下的ui.xml文件。如果其中数据不对应你的机型的话，进入recovery模式后，界面显示不正常。</p>
+<p>6.重新打包。  打包之后,其名称为new_image.img,不要疑惑,它就是新生成的recovery,为了不覆盖原文件(recovery.img),它就被命名为”new”.其它带”new”开头的,是用不到了,随时可以删了</p>
+<p>7.刷入手机。你可以用sp flash tool 在“download”方式下指定分区刷入，也可以用“叔叔工具箱”，在手机正常使用的情况下替换，但需要root权限。<br>如果遇到recovery无法使用的情况，请检查分析哪里出现的问题。有时候第三方的recovery中的ramdisk_header没有替换成官方recovery中的ramdisk_header。开机引导会无法识别.在做完这些，应该说是不会出现什么问题了。</p>
+<h2 id="非mtk篇之recovery制作"><a href="#非mtk篇之recovery制作" class="headerlink" title="非mtk篇之recovery制作"></a>非mtk篇之recovery制作</h2><p>-对于非MTK平台的recovery移植，要用“其它平台解压recovery.bat”进行解包。在你用mtk解压recovery.img出现错误提示，你就应该意识到你所解压的recovery是非MTK平台的。换个解包批处理即可。</p>
+<p> 1.非MTKrecovery解包之后，一般会有rmdisk文件夹、kernel、pagesize.txt、ram_disk、ram_disk.gz及一个recoveryimg。该recovery.img就你所解压的recovery，只不过是自动复制到目录下而已。你应该注意到，非MTK的recovery解包之后与MTK的有所不同，并且没有ramdisk_header与kernel_header。</p>
+<p> 2.要移植非MTK的recovery，先把除了“ramdisk文件夹”之外的5个文件删除。并把你解压的官方recovery的ramdisk、ramdisk_header、kernel、kernel_header与ram_disk.gz复制到第三方解包的recovery目录下（一般是只需要kernel、kernel_header与ramdisk_header即可。但为了看起来像一个MTK平台的recovery，可以把5个文件复制过来）<br>复制文件后，文件夹下看起来就像是MTK的 recovery。第三方recovery手动移植教程</p>
+<p>3.进入待打包的文件夹的etc目录下，修改recovery.fstab，把其中的挂载点信息修改成你对手机的挂载点即可。可以参考官方recovery中的fstab文件来修改（修改是注意第三方的关于sdcard方面的设置，其名称要保持与原来的一至，否则无法识别，比如，原第三方recovery用sdcard2来表示外置sd卡，那么，你也要用sdcard2表示）。修改时建议使用支持语法高亮显示的文件编辑器，比如SciTE.exe、notepad++等打开修改以保证其基本格式。最好不要使用window自带的记事本打开。<br>修改fstab文件很重要，如果挂载点错误。有可能，在你恢复出厂设置或者其它清除数据的操作时格错分区，比如把system分区当成data分区格式化了等。这会导致你最终无法开机，只能刷机或者找售后了。</p>
+<p>4.接下来就是打包。<br>在打包的时候，使用的是“MTK打包recoverybat”。在打包时，ramdisk文件夹与ramdisk_header会先合并，kernel、kernel_header合并 ，然后才打包成一个新的recovery，其名称就是 new_image.img。</p>
 
         </div>
 
@@ -208,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-30T13:31:26.499Z" itemprop="dateUpdated">2017-08-30 21:31:26</time>
+    Last updated: <time datetime="2017-09-03T14:17:29.781Z" itemprop="dateUpdated">2017-09-03 22:17:29</time>
 </span><br>
 
 
@@ -241,21 +246,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/09/03/recovery移植/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">安卓Recovery移植</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/08/30/Rom移植/" id="post-next" class="post-nav-link">
+      <a href="/2017/08/30/安卓厨房/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">安卓ROM移植 易懂详解</h4>
+        <h4 class="title">Linux  ROM制作工具 SuperR&#39;s Kitchen 中文汉化版</h4>
       </a>
     </div>
   
