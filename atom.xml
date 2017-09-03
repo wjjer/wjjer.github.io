@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjjer.github.com/"/>
-  <updated>2017-09-03T14:17:29.781Z</updated>
+  <updated>2017-09-03T14:38:02.538Z</updated>
   <id>http://wjjer.github.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>安卓Recovery移植</title>
     <link href="http://wjjer.github.com/2017/09/03/recovery%E7%A7%BB%E6%A4%8D/"/>
     <id>http://wjjer.github.com/2017/09/03/recovery移植/</id>
-    <published>2017-09-03T07:51:20.000Z</published>
-    <updated>2017-09-03T14:17:29.781Z</updated>
+    <published>2017-09-03T11:51:20.000Z</published>
+    <updated>2017-09-03T14:38:02.538Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。<br>替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab 就是记载系 统各个分区挂载的地方的文 件。在 initrd/etc init.rc 文件是开机初始化文 件。 在 initrd 如果你要添加或着减少文件 ，记得修改cpiolist.txt文件</p>
 <h2 id="mtk篇之recovery制作"><a href="#mtk篇之recovery制作" class="headerlink" title="mtk篇之recovery制作"></a>mtk篇之recovery制作</h2><p>  步骤</p>
@@ -53,7 +53,7 @@
       <category term="ROM移植" scheme="http://wjjer.github.com/categories/ROM%E7%A7%BB%E6%A4%8D/"/>
     
     
-      <category term="Rom移植" scheme="http://wjjer.github.com/tags/Rom%E7%A7%BB%E6%A4%8D/"/>
+      <category term="Recovery移植" scheme="http://wjjer.github.com/tags/Recovery%E7%A7%BB%E6%A4%8D/"/>
     
   </entry>
   

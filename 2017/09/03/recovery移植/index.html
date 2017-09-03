@@ -19,15 +19,15 @@
     <meta name="theme-color" content="#00B2EE">
     
     
-    <meta name="keywords" content="Rom移植">
+    <meta name="keywords" content="Recovery移植">
     <meta name="description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
-<meta name="keywords" content="Rom移植">
+<meta name="keywords" content="Recovery移植">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安卓Recovery移植">
 <meta property="og:url" content="http://wjjer.github.com/2017/09/03/recovery移植/index.html">
 <meta property="og:site_name" content="A Blog">
 <meta property="og:description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
-<meta property="og:updated_time" content="2017-09-03T14:17:29.781Z">
+<meta property="og:updated_time" content="2017-09-03T14:38:02.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安卓Recovery移植">
 <meta name="twitter:description" content="前言第三方recovery手动移植教程，这篇教程比较简单的，只要你认真看了，相信你动动手就知道怎么弄了。替换篇： 主要替换文件有kernel，key ，recovery.fstab，init.rc。 替换文件可以从旧的recover y.img取得。 kernel 文件就是机子的内核 了。 key 文件是机子的按钮的配 置文件。文件在 initrd/res 文件夹里 recovery.fstab">
@@ -107,6 +107,13 @@
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/wechat"  >
+                <i class="icon icon-lg icon-public"></i>
+                微信订阅号
+              </a>
+            </li>
+        
       </ul>
     </div>
   </div>
@@ -139,7 +146,7 @@
         <h1 class="title">安卓Recovery移植</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-09-03T07:51:20.000Z" itemprop="datePublished" class="page-time">
+                <time datetime="2017-09-03T11:51:20.000Z" itemprop="datePublished" class="page-time">
   2017-09-03
 </time>
 
@@ -171,7 +178,7 @@
     <div class="post-card">
         <h1 class="post-card-title">安卓Recovery移植</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-09-03 15:51:20" datetime="2017-09-03T07:51:20.000Z"  itemprop="datePublished">2017-09-03</time>
+            <time class="post-time" title="2017-09-03 19:51:20" datetime="2017-09-03T11:51:20.000Z"  itemprop="datePublished">2017-09-03</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ROM移植/">ROM移植</a></li></ul>
@@ -213,7 +220,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-09-03T14:17:29.781Z" itemprop="dateUpdated">2017-09-03 22:17:29</time>
+    Last updated: <time datetime="2017-09-03T14:38:02.538Z" itemprop="dateUpdated">2017-09-03 22:38:02</time>
 </span><br>
 
 
@@ -236,7 +243,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rom移植/">Rom移植</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Recovery移植/">Recovery移植</a></li></ul>
 
 
             
@@ -394,6 +401,27 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 
