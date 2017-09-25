@@ -128,13 +128,7 @@
       <url>/2017/08/29/lanternpojie/</url>
       <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Lantern – 蓝灯，速度最快的网络加速应用。Lantern 是个免费的应用程序，它能帮助你随时随地快速、可靠、安全地访问互联网。这款软件是由 Brave New Software 开发的，Brave New Software 在此之前还和华盛顿大学联合研发过一款叫 uProxy 的代理服务插件（Google Ideas 赞助），两者的原理相似，都是利用社交网络来解除网络封锁（类似于 P2P）。也正是因为 uProxy，后来才会传出蓝灯是由谷歌赞助开发的消息。</p>
 <h2 id="本版介绍："><a href="#本版介绍：" class="headerlink" title="本版介绍："></a>本版介绍：</h2><p>此版本为蓝灯 v3.7.4 (0705) 破解版，安装即可使用，此版本为安卓版本，请使用安卓手机安装使用，打开即可无限制科学上网。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/lanternpojie/lpojie.gif" alt="截图" title="">
-                </div>
-                <div class="image-caption">截图</div>
-            </figure>
+<p><img src="/2017/08/29/lanternpojie/lpojie.gif" alt="截图"></p>
 <h2 id="官方版下载"><a href="#官方版下载" class="headerlink" title="官方版下载"></a>官方版下载</h2><p>免费版每个月流量800M，固定流量内速度无限制，超过800M后速度限制为20KB/S</p>
 <p>专业版一年180元，流量无限不限速，支持同时连接多台服务器，支持Meek代理协议</p>
 <p>下载地址：<a href="https://github.com/getlantern/lantern-binaries" target="_blank" rel="external">点击我下载官方版</a></p>
@@ -172,20 +166,7 @@
 </ul>
 <p>下载地址：<a href="com.lerist.go_hosts_1.2.5.apk">点击这儿</a></p>
 <p>截图：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/fq/gohost1.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/fq/gohost2.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
+<p><img src="/2017/08/29/fq/gohost1.jpg" alt=""><br><img src="/2017/08/29/fq/gohost2.jpg" alt=""></p>
 <h2 id="3-天行VPN"><a href="#3-天行VPN" class="headerlink" title="3.天行VPN"></a>3.天行VPN</h2><p>天行也是不错的软件，一直在用，而且有免费套餐，虽然速度一般，但挺良心</p>
 <p>下载链接：<a href="xsky.txvpn_1.17.apk">点击我哦</a></p>
 <p>截图：</p>
@@ -211,27 +192,9 @@
     <entry>
       <title><![CDATA[三网NET√可免视频√可免热点√可免直播√]]></title>
       <url>/2017/08/29/mianliu1/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="先上几张图"><a href="#先上几张图" class="headerlink" title="先上几张图"></a>先上几张图</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/mianliu1/mianliu1-1.jpeg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/mianliu1/mianliu1-2.jpeg" alt="无Root版" title="">
-                </div>
-                <div class="image-caption">无Root版</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/mianliu1/mianliu1-3.jpeg" alt="Root版" title="">
-                </div>
-                <div class="image-caption">Root版</div>
-            </figure>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="先上几张图"><a href="#先上几张图" class="headerlink" title="先上几张图"></a>先上几张图</h2><p><img src="/2017/08/29/mianliu1/mianliu1-1.jpeg" alt=""></p>
+<p><img src="/2017/08/29/mianliu1/mianliu1-2.jpeg" alt="无Root版"></p>
+<p><img src="/2017/08/29/mianliu1/mianliu1-3.jpeg" alt="Root版"></p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>手机就设置 - 网络设置 - APN - 新建APN </p>
 <ul>
 <li>名称:随意 </li>
@@ -287,97 +250,7 @@
 <li>手机内有第二个系统的刷机包</li>
 <li>DualBootPatcher已经安装好并已被授予ROOT权限</li>
 </ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/1.jpg" alt="打开侧滑栏" title="">
-                </div>
-                <div class="image-caption">打开侧滑栏</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/2.jpg" alt="选择add zip 选项" title="">
-                </div>
-                <div class="image-caption">选择add zip 选项</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/3.jpg" alt="选择ROM" title="">
-                </div>
-                <div class="image-caption">选择ROM</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/4.jpg" alt="进行相关设置" title="">
-                </div>
-                <div class="image-caption">进行相关设置</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/5.jpg" alt="对新补丁包进行保存" title="">
-                </div>
-                <div class="image-caption">对新补丁包进行保存</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/6.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/7.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/8.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/9.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/10.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/11.jpg" alt="完成提示" title="">
-                </div>
-                <div class="image-caption">完成提示</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/12.jpg" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/28/androidMoreSys/13.jpg" alt="设置内核" title="">
-                </div>
-                <div class="image-caption">设置内核</div>
-            </figure>
+<p><img src="/2017/08/28/androidMoreSys/1.jpg" alt="打开侧滑栏"><br><img src="/2017/08/28/androidMoreSys/2.jpg" alt="选择add zip 选项"><br><img src="/2017/08/28/androidMoreSys/3.jpg" alt="选择ROM"><br><img src="/2017/08/28/androidMoreSys/4.jpg" alt="进行相关设置"><br><img src="/2017/08/28/androidMoreSys/5.jpg" alt="对新补丁包进行保存"><br><img src="/2017/08/28/androidMoreSys/6.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/7.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/8.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/9.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/10.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/11.jpg" alt="完成提示"><br><img src="/2017/08/28/androidMoreSys/12.jpg" alt=""><br><img src="/2017/08/28/androidMoreSys/13.jpg" alt="设置内核"></p>
 <p>现在返回ROM界面选择你要切换的系统就行了！</p>
 <p>如果有什么问题欢迎在我博客下留言或者联系QQ:2301403600</p>
 ]]></content>
@@ -546,50 +419,10 @@
       <url>/2017/08/27/carbon/</url>
       <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-先上图"><a href="#1-先上图" class="headerlink" title="1.先上图"></a>1.先上图</h2><pre><code>rom是基于Android7.1.2的，流畅肯定是没的说，先上几张图
 </code></pre><hr>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/1.jpg" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/2.jpg" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/3.jpg" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/4.jpg" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/5.jpg" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
+<p><img src="/2017/08/27/carbon/1.jpg" alt="carbon"><br><img src="/2017/08/27/carbon/2.jpg" alt="carbon"><br><img src="/2017/08/27/carbon/3.jpg" alt="carbon"><br><img src="/2017/08/27/carbon/4.jpg" alt="carbon"><br><img src="/2017/08/27/carbon/5.jpg" alt="carbon"></p>
 <h2 id="简单评测"><a href="#简单评测" class="headerlink" title="简单评测"></a>简单评测</h2><p>1.系统整体非常流畅，自带中文，续航情况没有测试，A900尿性，不测也罢<br>2.支持主题，开机剩余ram 1G+  ，整体优化不错<br>3.总之不错，试了就知道，哈哈，写不下去了</p>
 <hr>
-<h2 id="附上原贴说明"><a href="#附上原贴说明" class="headerlink" title="附上原贴说明"></a>附上原贴说明</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/27/carbon/or.png" alt="carbon" title="">
-                </div>
-                <div class="image-caption">carbon</div>
-            </figure>
+<h2 id="附上原贴说明"><a href="#附上原贴说明" class="headerlink" title="附上原贴说明"></a>附上原贴说明</h2><p><img src="/2017/08/27/carbon/or.png" alt="carbon"></p>
 <hr>
 <p>自己翻译，哈哈，别问我啥意思，我就是个搬运工</p>
 <hr>

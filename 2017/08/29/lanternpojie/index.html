@@ -39,7 +39,7 @@
         <link rel="alternate" type="application/atom+xml" title="A Blog" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.13">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -111,13 +111,6 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/wechat"  >
-                <i class="icon icon-lg icon-icon-fa-snowflake-o"></i>
-                微信订阅号
-              </a>
-            </li>
-        
       </ul>
     </div>
   </div>
@@ -130,6 +123,16 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">免费科学上网 蓝灯 v3.7.4 (0705) 专业版无限制破解版</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
         
         
     </div>
@@ -185,13 +188,7 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <script src="/assets/js/APlayer.min.js"> </script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Lantern – 蓝灯，速度最快的网络加速应用。Lantern 是个免费的应用程序，它能帮助你随时随地快速、可靠、安全地访问互联网。这款软件是由 Brave New Software 开发的，Brave New Software 在此之前还和华盛顿大学联合研发过一款叫 uProxy 的代理服务插件（Google Ideas 赞助），两者的原理相似，都是利用社交网络来解除网络封锁（类似于 P2P）。也正是因为 uProxy，后来才会传出蓝灯是由谷歌赞助开发的消息。</p>
 <h2 id="本版介绍："><a href="#本版介绍：" class="headerlink" title="本版介绍："></a>本版介绍：</h2><p>此版本为蓝灯 v3.7.4 (0705) 破解版，安装即可使用，此版本为安卓版本，请使用安卓手机安装使用，打开即可无限制科学上网。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2017/08/29/lanternpojie/lpojie.gif" alt="截图" title="">
-                </div>
-                <div class="image-caption">截图</div>
-            </figure>
+<p><img src="/2017/08/29/lanternpojie/lpojie.gif" alt="截图"></p>
 <h2 id="官方版下载"><a href="#官方版下载" class="headerlink" title="官方版下载"></a>官方版下载</h2><p>免费版每个月流量800M，固定流量内速度无限制，超过800M后速度限制为20KB/S</p>
 <p>专业版一年180元，流量无限不限速，支持同时连接多台服务器，支持Meek代理协议</p>
 <p>下载地址：<a href="https://github.com/getlantern/lantern-binaries" target="_blank" rel="external">点击我下载官方版</a></p>
@@ -368,7 +365,27 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: true };
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+<script src="/js/main.min.js?v=1.6.13"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.13" async></script>
 
 
 
